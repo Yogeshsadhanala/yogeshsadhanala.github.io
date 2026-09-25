@@ -1,0 +1,265 @@
+/* ========================================
+   YOGESH SAI SADHANALA
+   CINEMATIC PORTFOLIO
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0a0a;
+    color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 8%;
+    border-bottom: 1px solid #242424;
+}
+
+header h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    max-width: 1100px;
+}
+
+header p {
+    margin-top: 30px;
+    color: #a8a8a8;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   MAIN LAYOUT
+======================================== */
+
+main {
+    width: 84%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+section {
+    padding: 120px 0;
+    border-bottom: 1px solid #242424;
+}
+
+section h2 {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: #8d8d8d;
+    margin-bottom: 70px;
+}
+
+
+/* ========================================
+   SELECTED WORK
+======================================== */
+
+section:first-child article {
+    padding: 70px 0;
+    border-top: 1px solid #292929;
+}
+
+section:first-child article > p:first-child {
+    color: #777777;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+section:first-child h3 {
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+section:first-child article p {
+    max-width: 760px;
+    color: #b8b8b8;
+    margin-bottom: 20px;
+}
+
+section:first-child article p strong {
+    color: #ffffff;
+}
+
+section:first-child article a {
+    display: inline-block;
+    margin-top: 25px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffffff;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+
+/* ========================================
+   ABOUT
+======================================== */
+
+section:nth-of-type(2) p {
+    max-width: 900px;
+    font-size: clamp(1.4rem, 3vw, 2.4rem);
+    line-height: 1.45;
+    margin-bottom: 30px;
+    color: #dddddd;
+}
+
+
+/* ========================================
+   SOFTWARE & SKILLS
+======================================== */
+
+section:nth-of-type(3) p {
+    max-width: 1000px;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #b5b5b5;
+}
+
+
+/* ========================================
+   TRAINING & CERTIFICATIONS
+======================================== */
+
+section:nth-of-type(4) > h3 {
+    font-size: 1rem;
+    letter-spacing: 3px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+section:nth-of-type(4) article {
+    padding: 35px 0;
+    border-top: 1px solid #292929;
+}
+
+section:nth-of-type(4) article h4 {
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    margin-bottom: 8px;
+}
+
+section:nth-of-type(4) article p {
+    max-width: 750px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+section:nth-of-type(4) article p strong {
+    color: #d5d5d5;
+}
+
+section:nth-of-type(4) article a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #777777;
+    padding-bottom: 4px;
+}
+
+
+/* ========================================
+   CONTACT
+======================================== */
+
+section:nth-of-type(5) h2 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    letter-spacing: -2px;
+    margin-bottom: 40px;
+}
+
+section:nth-of-type(5) p {
+    max-width: 700px;
+    color: #aaaaaa;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    width: 84%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 40px 0;
+    color: #666666;
+    font-size: 0.8rem;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        min-height: 75vh;
+        padding: 60px 7%;
+    }
+
+    header h1 {
+        letter-spacing: -1px;
+    }
+
+    header p {
+        font-size: 0.75rem;
+        line-height: 2;
+    }
+
+    main,
+    footer {
+        width: 86%;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    section h2 {
+        margin-bottom: 45px;
+    }
+
+    section:first-child article {
+        padding: 50px 0;
+    }
+}

@@ -263,3 +263,58 @@ footer {
         padding: 50px 0;
     }
 }
+/* ========================================
+   PORTFOLIO LAYOUT REFINEMENT
+======================================== */
+
+header {
+    min-height: 75vh;
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+header h1 {
+    max-width: 900px;
+}
+
+main {
+    width: 84%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    margin: 35px 0;
+    object-fit: cover;
+}
+
+section:first-child article {
+    max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 86%;
+        min-height: 70vh;
+        padding: 60px 0;
+    }
+
+    .project-image {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+}

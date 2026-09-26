@@ -387,3 +387,8 @@ section:first-child article {
         font-size: 23px;
     }
 }
+.portfolio-video-vertical {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 9 / 16;
+}

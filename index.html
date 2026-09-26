@@ -131,7 +131,13 @@
 
                 <h3>HOT AIR BALLOON FESTIVAL</h3>
 
-                <img src="Hot Air Balloons.jpeg" alt="Hot Air Balloon Festival event film" class="project-image">
+               <div class="portfolio-video" onclick="playBalloons(this)">
+    <img src="Hot Air Balloons.jpeg" alt="Hot Air Balloon Festival">
+
+    <div class="portfolio-play-button">
+        <span>▶</span>
+    </div>
+</div>
 
                 <p>
                     <strong>Event Film</strong>
@@ -150,7 +156,7 @@
                     Transitions • Title Design
                 </p>
 
-                <a href="#">WATCH FILM →</a>
+               
 
             </article>
 
@@ -480,6 +486,16 @@ function playWinter(container) {
         <iframe
             src="https://www.youtube.com/embed/ybrdHXI9Wkg?autoplay=1&rel=0"
             title="Boston City Reveal"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    `;
+}
+    function playBalloons(container) {
+    container.innerHTML = `
+        <iframe
+            src="https://www.youtube.com/embed/yivAsiJEvDQ?autoplay=1&rel=0"
+            title="Hot Air Balloon Festival"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>

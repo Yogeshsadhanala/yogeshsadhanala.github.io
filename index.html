@@ -91,7 +91,13 @@
 
                 <h3>BOSTON CITY REVEAL</h3>
 
-                <img src="Boston.png" alt="Boston City Reveal city and travel film" class="project-image">
+                <div class="portfolio-video portfolio-video-vertical" onclick="playBoston(this)">
+    <img src="Boston.png" alt="Boston City Reveal">
+
+    <div class="portfolio-play-button">
+        <span>▶</span>
+    </div>
+</div>
                 
 
                 <p>
@@ -111,7 +117,7 @@
                     Transitions • Vertical Content
                 </p>
 
-                <a href="#">WATCH FILM →</a>
+              
 
             </article>
 
@@ -464,6 +470,16 @@ function playWinter(container) {
         <iframe
             src="https://www.youtube.com/embed/ky13Yyu_UT4?autoplay=1&rel=0"
             title="WINTER | Cinematic Drone Short Film"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    `;
+}
+    function playBoston(container) {
+    container.innerHTML = `
+        <iframe
+            src="https://www.youtube.com/embed/ybrdHXI9Wkg?autoplay=1&rel=0"
+            title="Boston City Reveal"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
         </iframe>

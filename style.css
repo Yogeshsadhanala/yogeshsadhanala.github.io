@@ -318,26 +318,6 @@ section:first-child article {
         padding: 70px 0;
     }
 }
-/* ==============================
-   RESPONSIVE VIDEO PLAYER
-================================ */
-
-.video-container {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    margin: 25px 0;
-    background: #000;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-}
 /* =========================================
    CINEMATIC PORTFOLIO VIDEO
 ========================================= */
@@ -354,15 +334,12 @@ section:first-child article {
 }
 
 .portfolio-video img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.4s ease;
-}
-
-.portfolio-video:hover img {
-    transform: scale(1.02);
 }
 
 .portfolio-play-button {
@@ -378,7 +355,7 @@ section:first-child article {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s ease;
+    z-index: 2;
 }
 
 .portfolio-play-button span {
@@ -387,14 +364,11 @@ section:first-child article {
     margin-left: 5px;
 }
 
-.portfolio-video:hover .portfolio-play-button {
-    transform: translate(-50%, -50%) scale(1.1);
-    background: rgba(0, 0, 0, 0.85);
-}
-
 .portfolio-video iframe {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
     border: 0;
     display: block;
 }

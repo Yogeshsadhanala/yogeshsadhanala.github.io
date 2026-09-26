@@ -387,8 +387,26 @@ section:first-child article {
         font-size: 23px;
     }
 }
-.portfolio-video-vertical {
-    width: 100%;
-    max-width: 500px;
+/* BOSTON VERTICAL VIDEO */
+
+.portfolio-video.portfolio-video-vertical {
+    width: 450px;
+    max-width: 100%;
     aspect-ratio: 9 / 16;
+    height: auto;
+}
+
+.portfolio-video.portfolio-video-vertical iframe {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+@media (max-width: 600px) {
+    .portfolio-video.portfolio-video-vertical {
+        width: 100%;
+        max-width: 100%;
+    }
 }

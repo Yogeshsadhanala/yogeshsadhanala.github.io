@@ -235,8 +235,10 @@
                     video editing workflows and post-production techniques.
                 </p>
 
-                <a href="Certificates/Premiere Pro.pdf" target="_blank">
-    VIEW CERTIFICATE →</a>
+                <a href="javascript:void(0)"
+   onclick="openCertificate('Certificates/Premiere%20Pro.pdf')">
+    VIEW CERTIFICATE →
+</a>
 
             </article>
 
@@ -503,7 +505,35 @@ function playWinter(container) {
     `;
 }
 </script>
+<!-- =========================
+     CERTIFICATE POPUP
+========================== -->
 
+<div id="certificateModal" class="certificate-modal">
+
+    <button class="certificate-close" onclick="closeCertificate()">
+        ×
+    </button>
+
+    <div class="certificate-modal-content">
+        <iframe id="certificateViewer" title="Certificate"></iframe>
+    </div>
+
+</div>
+
+<script>
+function openCertificate(file) {
+    document.getElementById("certificateViewer").src = file;
+    document.getElementById("certificateModal").classList.add("show");
+    document.body.style.overflow = "hidden";
+}
+
+function closeCertificate() {
+    document.getElementById("certificateModal").classList.remove("show");
+    document.getElementById("certificateViewer").src = "";
+    document.body.style.overflow = "";
+}
+</script>
 </body>
 
 </html>

@@ -53,14 +53,12 @@
 
                 <h3>WINTER</h3>
                 
-              <div class="video-container">
-    <iframe
-        src="https://www.youtube.com/embed/ky13Yyu_UT4"
-        title="WINTER | Cinematic Drone Short Film"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
+              <div class="portfolio-video" onclick="playWinter(this)">
+    <img src="Winter.jpeg" alt="WINTER cinematic drone short film">
+
+    <div class="portfolio-play-button">
+        <span>▶</span>
+    </div>
 </div>
                 <p>
                     <strong>Cinematic Drone Short Film</strong>
@@ -460,7 +458,18 @@
         <p>© 2026 Yogesh Sai Sadhanala</p>
 
     </footer>
-
+<script>
+function playWinter(container) {
+    container.innerHTML = `
+        <iframe
+            src="https://www.youtube.com/embed/ky13Yyu_UT4?autoplay=1&rel=0"
+            title="WINTER | Cinematic Drone Short Film"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    `;
+}
+</script>
 
 </body>
 

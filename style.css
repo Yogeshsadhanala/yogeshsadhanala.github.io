@@ -506,12 +506,12 @@ section:first-child article {
     }
 }
 /* =========================================
-   PHOTOGRAPHY PROJECT CARDS
+   PHOTOGRAPHY
 ========================================= */
 
 .photography-heading {
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .photography-heading > p {
@@ -532,91 +532,192 @@ section:first-child article {
 
 
 /* =========================================
-   PHOTOGRAPHY PROJECT CARD
+   PHOTOGRAPHY PROJECT
 ========================================= */
 
-.photo-project-card {
-    max-width: 1000px !important;
-    padding: 70px 0 !important;
+.photo-gallery-project {
+    max-width: 1100px !important;
+    padding: 60px 0 !important;
 }
 
-
-/* PROJECT COVER IMAGE */
-
-.photo-project-cover {
-    width: 100%;
-    max-width: 900px;
-    overflow: hidden;
+.photo-gallery-info {
+    max-width: 760px;
     margin-bottom: 35px;
-    background: #111111;
 }
 
-.photo-project-cover img {
-    width: 100%;
-    height: 480px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.photo-project-card:hover .photo-project-cover img {
-    transform: scale(1.015);
-}
-
-
-/* PROJECT INFORMATION */
-
-.photo-project-card-info {
-    max-width: 700px;
-}
-
-.photo-project-card .photo-number {
-    color: #777777;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.photo-project-card .photo-meta {
+.photo-gallery-project .photo-meta {
     color: #ffffff;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
 }
 
-.photo-project-card .photo-description {
-    max-width: 650px;
+.photo-gallery-project .photo-description {
+    max-width: 680px;
     color: #a8a8a8;
     line-height: 1.8;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.photo-gallery-project h3 {
+    margin-bottom: 0;
 }
 
 
 /* =========================================
-   VIEW PROJECT BUTTON
+   SMALL PHOTO GRID
 ========================================= */
 
-.photo-project-button {
-    appearance: none;
-    background: transparent;
-    color: #ffffff;
-
-    border: 0;
-    border-bottom: 1px solid #ffffff;
-
-    padding: 0 0 6px;
-    margin-top: 5px;
-
-    font-family: inherit;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-
-    cursor: pointer;
-    transition: opacity 0.3s ease;
+.photo-gallery-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
 }
 
-.photo-project-button:hover {
-    opacity: 0.6;
+.photo-gallery-grid img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+
+    background: #111111;
+    cursor: pointer;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+.photo-gallery-grid img:hover {
+    opacity: 0.75;
+    transform: scale(0.985);
+}
+
+
+/* =========================================
+   PHOTO LIGHTBOX
+========================================= */
+
+.photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 20000;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.94);
+    padding: 40px 90px;
+}
+
+.photo-lightbox.show {
+    display: flex;
+}
+
+
+/* LARGE PHOTO */
+
+.lightbox-image-container {
+    max-width: 90vw;
+    max-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-image-container img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 82vw;
+    max-height: 82vh;
+
+    object-fit: contain;
+}
+
+#lightboxCounter {
+    margin-top: 12px;
+    margin-bottom: 0;
+
+    color: #aaaaaa;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+
+/* CLOSE BUTTON */
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 20002;
+}
+
+.lightbox-close:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* PREVIOUS / NEXT */
+
+.lightbox-prev,
+.lightbox-next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 55px;
+    height: 70px;
+
+    border: 0;
+    background: rgba(0, 0, 0, 0.35);
+    color: #ffffff;
+
+    font-size: 34px;
+
+    cursor: pointer;
+    z-index: 20002;
+
+    transition: background 0.3s ease;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 
@@ -625,7 +726,7 @@ section:first-child article {
 ========================================= */
 
 .film-heading {
-    margin-top: 90px;
+    margin-top: 80px;
     padding-top: 70px;
     border-top: 1px solid #292929;
     margin-bottom: 20px;
@@ -649,34 +750,86 @@ section:first-child article {
 
 
 /* =========================================
-   PHOTOGRAPHY PROJECT CARDS - MOBILE
+   PHOTOGRAPHY TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .photo-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photo-gallery-grid img {
+        height: 170px;
+    }
+}
+
+
+/* =========================================
+   PHOTOGRAPHY MOBILE
 ========================================= */
 
 @media (max-width: 768px) {
 
     .photography-heading {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
 
-    .photo-project-card {
-        padding: 50px 0 !important;
+    .photo-gallery-project {
+        padding: 45px 0 !important;
     }
 
-    .photo-project-cover {
+    .photo-gallery-info {
         margin-bottom: 25px;
     }
 
-    .photo-project-cover img {
-        width: 100%;
-        height: auto;
+    .photo-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
-    .photo-project-card-info {
-        max-width: 100%;
+    .photo-gallery-grid img {
+        height: 145px;
+    }
+
+    .photo-lightbox {
+        padding: 15px;
+    }
+
+    .lightbox-image-container img {
+        max-width: 94vw;
+        max-height: 78vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 28px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 42px;
+        height: 60px;
+        font-size: 26px;
+
+        background: rgba(0, 0, 0, 0.55);
+    }
+
+    .lightbox-prev {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
     }
 
     .film-heading {
-        margin-top: 60px;
+        margin-top: 55px;
         padding-top: 50px;
     }
 }

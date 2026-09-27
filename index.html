@@ -352,7 +352,7 @@
     <div class="portfolio-video portfolio-video-vertical"
          onclick="playTimelapse(this)">
 
-        <img src="Timelapse.jpg"
+        <img src="Timelapse.png"
              alt="Sky in Motion cinematic timelapse">
 
         <div class="portfolio-play-button">
@@ -796,6 +796,16 @@ function playWinter(container) {
             allowfullscreen>
         </iframe>
     `;
+     function playTimelapse(container) {
+    container.innerHTML = `
+        <iframe
+            src="https://www.youtube.com/embed/IwG8GlShcpk?autoplay=1&rel=0"
+            title="SKY IN MOTION | Cinematic Timelapse"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+    `;
+}   
 }
 </script>
 <!-- =========================

@@ -505,3 +505,150 @@ section:first-child article {
         font-size: 28px;
     }
 }
+/* =========================================
+   PHOTOGRAPHY PORTFOLIO
+========================================= */
+
+.photography-heading {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.photography-heading > p {
+    color: #777777;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.photography-heading h2 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+}
+
+
+/* PHOTOGRAPHY PROJECT */
+
+.photo-project {
+    max-width: 1100px !important;
+    padding: 70px 0 !important;
+}
+
+.photo-project-info {
+    margin-bottom: 35px;
+}
+
+.photo-project .photo-number {
+    color: #777777;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.photo-project .photo-meta {
+    color: #ffffff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.photo-project .photo-description {
+    max-width: 650px;
+    color: #a8a8a8;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+
+/* PHOTO GRID */
+
+.photo-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 35px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 420px;
+    display: block;
+    object-fit: cover;
+    background: #111111;
+    cursor: pointer;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(0.99);
+    opacity: 0.85;
+}
+
+
+/* FILM & VIDEO HEADING */
+
+.film-heading {
+    margin-top: 90px;
+    padding-top: 70px;
+    border-top: 1px solid #292929;
+    margin-bottom: 20px;
+}
+
+.film-heading > p {
+    color: #777777;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.film-heading h2 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   PHOTOGRAPHY - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .photography-heading {
+        margin-bottom: 30px;
+    }
+
+    .photo-project {
+        padding: 50px 0 !important;
+    }
+
+    .photo-project-info {
+        margin-bottom: 25px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .photo-gallery img {
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
+    }
+
+    .film-heading {
+        margin-top: 60px;
+        padding-top: 50px;
+    }
+}

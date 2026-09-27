@@ -44,7 +44,7 @@
 
             <h2>SELECTED WORK</h2>
 
-    <!-- =========================
+ <!-- =========================
      PHOTOGRAPHY
 ========================== -->
 
@@ -54,20 +54,13 @@
 </div>
 
 
-<!-- PHOTOGRAPHY PROJECT 01 - WOOL -->
+<!-- =========================
+     WOOL
+========================== -->
 
-<article class="photo-project-card">
+<article class="photo-gallery-project">
 
-    <div class="photo-project-cover">
-        <img src="Photography/WOOL/Wool-01.jpeg"
-             alt="Wool documentary photography project">
-    </div>
-
-    <div class="photo-project-card-info">
-
-        <p class="photo-number">01</p>
-
-        <h3>WOOL</h3>
+    <div class="photo-gallery-info">
 
         <p class="photo-meta">
             Documentary Photography • India
@@ -79,30 +72,57 @@
             moments that keep an old craft alive.
         </p>
 
-        <button class="photo-project-button"
-                onclick="openPhotoProject('woolProject')">
-            VIEW PROJECT →
-        </button>
+        <h3>WOOL</h3>
+
+    </div>
+
+
+    <div class="photo-gallery-grid">
+
+        <img src="Photography/WOOL/Wool-01.jpeg"
+             alt="Wool documentary photograph 1"
+             onclick="openLightbox('wool', 0)">
+
+        <img src="Photography/WOOL/Wool-02.jpeg"
+             alt="Wool documentary photograph 2"
+             onclick="openLightbox('wool', 1)">
+
+        <img src="Photography/WOOL/Wool-03.jpeg"
+             alt="Wool documentary photograph 3"
+             onclick="openLightbox('wool', 2)">
+
+        <img src="Photography/WOOL/Wool-04.jpeg"
+             alt="Wool documentary photograph 4"
+             onclick="openLightbox('wool', 3)">
+
+        <img src="Photography/WOOL/Wool-05.jpeg"
+             alt="Wool documentary photograph 5"
+             onclick="openLightbox('wool', 4)">
+
+        <img src="Photography/WOOL/Wool-06.jpeg"
+             alt="Wool documentary photograph 6"
+             onclick="openLightbox('wool', 5)">
+
+        <img src="Photography/WOOL/Wool-07.jpeg"
+             alt="Wool documentary photograph 7"
+             onclick="openLightbox('wool', 6)">
+
+        <img src="Photography/WOOL/Wool-08.jpeg"
+             alt="Wool documentary photograph 8"
+             onclick="openLightbox('wool', 7)">
 
     </div>
 
 </article>
 
 
-<!-- PHOTOGRAPHY PROJECT 02 - RURAL RHYTHMS -->
+<!-- =========================
+     RURAL RHYTHMS
+========================== -->
 
-<article class="photo-project-card">
+<article class="photo-gallery-project">
 
-    <div class="photo-project-cover">
-        <img src="Photography/RURAL RHYTHMS/Rural-07.jpeg"
-             alt="Rural Rhythms documentary photography project">
-    </div>
-
-    <div class="photo-project-card-info">
-
-        <p class="photo-number">02</p>
-
-        <h3>RURAL RHYTHMS</h3>
+    <div class="photo-gallery-info">
 
         <p class="photo-meta">
             Documentary Photography • Rural India
@@ -114,14 +134,87 @@
             shaped by generations.
         </p>
 
-        <button class="photo-project-button"
-                onclick="openPhotoProject('ruralProject')">
-            VIEW PROJECT →
-        </button>
+        <h3>RURAL RHYTHMS</h3>
+
+    </div>
+
+
+    <div class="photo-gallery-grid">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-01.jpeg"
+             alt="Rural Rhythms photograph 1"
+             onclick="openLightbox('rural', 0)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-02.jpeg"
+             alt="Rural Rhythms photograph 2"
+             onclick="openLightbox('rural', 1)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-03.jpeg"
+             alt="Rural Rhythms photograph 3"
+             onclick="openLightbox('rural', 2)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-04.jpeg"
+             alt="Rural Rhythms photograph 4"
+             onclick="openLightbox('rural', 3)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-05.jpeg"
+             alt="Rural Rhythms photograph 5"
+             onclick="openLightbox('rural', 4)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-06.jpeg"
+             alt="Rural Rhythms photograph 6"
+             onclick="openLightbox('rural', 5)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-07.jpeg"
+             alt="Rural Rhythms photograph 7"
+             onclick="openLightbox('rural', 6)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-08.jpeg"
+             alt="Rural Rhythms photograph 8"
+             onclick="openLightbox('rural', 7)">
+
+        <img src="Photography/RURAL RHYTHMS/Rural-09.jpeg"
+             alt="Rural Rhythms photograph 9"
+             onclick="openLightbox('rural', 8)">
 
     </div>
 
 </article>
+
+
+<!-- =========================
+     PHOTOGRAPHY LIGHTBOX
+========================== -->
+
+<div id="photoLightbox" class="photo-lightbox">
+
+    <button class="lightbox-close"
+            onclick="closeLightbox()"
+            aria-label="Close photograph">
+        &times;
+    </button>
+
+    <button class="lightbox-prev"
+            onclick="changeLightboxPhoto(-1)"
+            aria-label="Previous photograph">
+        &#10094;
+    </button>
+
+    <div class="lightbox-image-container">
+        <img id="lightboxImage"
+             src=""
+             alt="Selected documentary photograph">
+
+        <p id="lightboxCounter"></p>
+    </div>
+
+    <button class="lightbox-next"
+            onclick="changeLightboxPhoto(1)"
+            aria-label="Next photograph">
+        &#10095;
+    </button>
+
+</div>
 
 
         <!-- =========================

@@ -44,87 +44,168 @@
 
             <h2>SELECTED WORK</h2>
 
-                    <!-- =========================
-             PHOTOGRAPHY
-        ========================== -->
+        /* =========================================
+   PHOTOGRAPHY PROJECT CARDS
+========================================= */
 
-        <div class="photography-heading">
-            <p>DOCUMENTARY PHOTOGRAPHY</p>
-            <h2>PHOTOGRAPHY</h2>
-        </div>
+.photography-heading {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
 
+.photography-heading > p {
+    color: #777777;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
 
-        <!-- PHOTOGRAPHY PROJECT 01 - WOOL -->
-
-        <article class="photo-project">
-
-            <div class="photo-project-info">
-                <p class="photo-number">01</p>
-
-                <h3>WOOL</h3>
-
-                <p class="photo-meta">
-                    Documentary Photography • India
-                </p>
-
-                <p class="photo-description">
-                    A quiet documentation of traditional wool making —
-                    following the people, hands, textures, and everyday
-                    moments that keep an old craft alive.
-                </p>
-            </div>
-
-            <div class="photo-gallery">
-
-                <img src="Photography/WOOL/Wool-01.jpeg" alt="Traditional wool making documentary">
-                <img src="Photography/WOOL/Wool-02.jpeg" alt="Traditional wool craft">
-                <img src="Photography/WOOL/Wool-03.jpeg" alt="Wool making process">
-                <img src="Photography/WOOL/Wool-04.jpeg" alt="Traditional wool artisan">
-                <img src="Photography/WOOL/Wool-05.jpeg" alt="Handcrafted wool process">
-                <img src="Photography/WOOL/Wool-06.jpeg" alt="Wool craftsmanship">
-                <img src="Photography/WOOL/Wool-07.jpeg" alt="Traditional wool work">
-                <img src="Photography/WOOL/Wool-08.jpeg" alt="Documentary photograph of wool making">
-
-            </div>
-
-        </article>
+.photography-heading h2 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 0;
+}
 
 
-        <!-- PHOTOGRAPHY PROJECT 02 - RURAL RHYTHMS -->
+/* PROJECT CARD */
 
-        <article class="photo-project">
+.photo-project-card {
+    max-width: 1000px !important;
+    padding: 70px 0 !important;
+}
 
-            <div class="photo-project-info">
-                <p class="photo-number">02</p>
+.photo-project-cover {
+    width: 100%;
+    max-width: 900px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    background: #111111;
+}
 
-                <h3>RURAL RHYTHMS</h3>
+.photo-project-cover img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
 
-                <p class="photo-meta">
-                    Documentary Photography • Rural India
-                </p>
+.photo-project-card:hover .photo-project-cover img {
+    transform: scale(1.015);
+}
 
-                <p class="photo-description">
-                    A visual study of rural life — where people, land,
-                    tradition, faith, and everyday work exist in a rhythm
-                    shaped by generations.
-                </p>
-            </div>
 
-            <div class="photo-gallery">
+/* PROJECT INFORMATION */
 
-                <img src="Photography/RURAL RHYTHMS/Rural-01.jpeg" alt="Documentary photography of rural India">
-                <img src="Photography/RURAL RHYTHMS/Rural-02.jpeg" alt="Rural landscape and everyday life">
-                <img src="Photography/RURAL RHYTHMS/Rural-03.jpeg" alt="Life in rural India">
-                <img src="Photography/RURAL RHYTHMS/Rural-04.jpeg" alt="Traditional rural life">
-                <img src="Photography/RURAL RHYTHMS/Rural-05.jpeg" alt="Agriculture and rural tradition">
-                <img src="Photography/RURAL RHYTHMS/Rural-06.jpeg" alt="Everyday rural life">
-                <img src="Photography/RURAL RHYTHMS/Rural-07.jpeg" alt="Traditional farming in rural India">
-                <img src="Photography/RURAL RHYTHMS/Rural-08.jpeg" alt="Rural architecture and tradition">
-                <img src="Photography/RURAL RHYTHMS/Rural-09.jpeg" alt="People and agricultural life in rural India">
+.photo-project-card-info {
+    max-width: 700px;
+}
 
-            </div>
+.photo-project-card .photo-number {
+    color: #777777;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
 
-        </article>
+.photo-project-card .photo-meta {
+    color: #ffffff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.photo-project-card .photo-description {
+    max-width: 650px;
+    color: #a8a8a8;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* VIEW PROJECT BUTTON */
+
+.photo-project-button {
+    appearance: none;
+    background: transparent;
+    color: #ffffff;
+
+    border: 0;
+    border-bottom: 1px solid #ffffff;
+
+    padding: 0 0 6px;
+    margin-top: 5px;
+
+    font-family: inherit;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.photo-project-button:hover {
+    opacity: 0.6;
+}
+
+
+/* FILM & VIDEO */
+
+.film-heading {
+    margin-top: 90px;
+    padding-top: 70px;
+    border-top: 1px solid #292929;
+    margin-bottom: 20px;
+}
+
+.film-heading > p {
+    color: #777777;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.film-heading h2 {
+    color: #ffffff;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   PHOTOGRAPHY PROJECT CARDS - MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .photography-heading {
+        margin-bottom: 30px;
+    }
+
+    .photo-project-card {
+        padding: 50px 0 !important;
+    }
+
+    .photo-project-cover {
+        margin-bottom: 25px;
+    }
+
+    .photo-project-cover img {
+        width: 100%;
+        height: auto;
+    }
+
+    .film-heading {
+        margin-top: 60px;
+        padding-top: 50px;
+    }
+}
 
 
         <!-- =========================

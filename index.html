@@ -780,6 +780,136 @@ function closeCertificate() {
     document.body.style.overflow = "";
 }
 </script>
+
+   <script>
+
+/* =========================================
+   PHOTOGRAPHY LIGHTBOX
+========================================= */
+
+const photoCollections = {
+
+    wool: [
+        "Photography/WOOL/Wool-01.jpeg",
+        "Photography/WOOL/Wool-02.jpeg",
+        "Photography/WOOL/Wool-03.jpeg",
+        "Photography/WOOL/Wool-04.jpeg",
+        "Photography/WOOL/Wool-05.jpeg",
+        "Photography/WOOL/Wool-06.jpeg",
+        "Photography/WOOL/Wool-07.jpeg",
+        "Photography/WOOL/Wool-08.jpeg"
+    ],
+
+    rural: [
+        "Photography/RURAL RHYTHMS/Rural-01.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-02.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-03.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-04.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-05.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-06.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-07.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-08.jpeg",
+        "Photography/RURAL RHYTHMS/Rural-09.jpeg"
+    ]
+};
+
+let currentCollection = "";
+let currentPhotoIndex = 0;
+
+
+function openLightbox(collection, index) {
+
+    currentCollection = collection;
+    currentPhotoIndex = index;
+
+    const lightbox = document.getElementById("photoLightbox");
+
+    lightbox.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+    updateLightboxPhoto();
+}
+
+
+function closeLightbox() {
+
+    const lightbox = document.getElementById("photoLightbox");
+
+    lightbox.classList.remove("show");
+
+    document.body.style.overflow = "";
+}
+
+
+function changeLightboxPhoto(direction) {
+
+    const photos = photoCollections[currentCollection];
+
+    currentPhotoIndex += direction;
+
+    if (currentPhotoIndex < 0) {
+        currentPhotoIndex = photos.length - 1;
+    }
+
+    if (currentPhotoIndex >= photos.length) {
+        currentPhotoIndex = 0;
+    }
+
+    updateLightboxPhoto();
+}
+
+
+function updateLightboxPhoto() {
+
+    const photos = photoCollections[currentCollection];
+
+    const image = document.getElementById("lightboxImage");
+    const counter = document.getElementById("lightboxCounter");
+
+    image.src = photos[currentPhotoIndex];
+
+    counter.textContent =
+        (currentPhotoIndex + 1) + " / " + photos.length;
+}
+
+
+/* KEYBOARD CONTROLS */
+
+document.addEventListener("keydown", function(event) {
+
+    const lightbox = document.getElementById("photoLightbox");
+
+    if (!lightbox.classList.contains("show")) {
+        return;
+    }
+
+    if (event.key === "ArrowRight") {
+        changeLightboxPhoto(1);
+    }
+
+    if (event.key === "ArrowLeft") {
+        changeLightboxPhoto(-1);
+    }
+
+    if (event.key === "Escape") {
+        closeLightbox();
+    }
+
+});
+
+
+/* CLICK DARK BACKGROUND TO CLOSE */
+
+document.getElementById("photoLightbox").addEventListener("click", function(event) {
+
+    if (event.target === this) {
+        closeLightbox();
+    }
+
+});
+
+</script>
 </body>
 
 </html>
